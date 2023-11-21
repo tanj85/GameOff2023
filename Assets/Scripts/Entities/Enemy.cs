@@ -4,15 +4,32 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    // Start is called before the first frame update
-    void Start()
+    public TriggerResponse playerTriggerResponse;
+
+    public override void Start()
     {
-        
+        base.Start();
+        playerTriggerResponse.onTriggerEnter2D = OnPlayerTriggerEnter2D;
+        playerTriggerResponse.onTriggerExit2D = OnPlayerTriggerExit2D;
     }
 
-    // Update is called once per frame
-    void Update()
+    #region Collider methods.
+    private void OnPlayerTriggerEnter2D(Collider2D collider)
     {
-        
+        if (collider.gameObject.tag == "Player")
+        {
+            Debug.Log("Player entered");
+            Entity target = collider.gameObject.GetComponent<Entity>();
+            DealDamage(attackDamage, target);
+        }
     }
+
+    private void OnPlayerTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Player")
+        {
+            Debug.Log("Player exited");
+        }
+    }
+    #endregion
 }
