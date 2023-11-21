@@ -30,6 +30,7 @@ public class Player : Entity
     void FixedUpdate(){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
     }
+    
     public override void Die()
     {
         base.Die();
