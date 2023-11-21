@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Player : Entity
 {
-    public SpriteRenderer sprite;
-    
+    public Sprite spriteFaceRight;
+    public Sprite spriteFaceDown;
+    //public Animator anim;
+    //public Animator 
+    Vector2 movement;
+
     void Update()
     {
-        // Handle horizontal movement
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+        // Handle movement
+        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.y = Input.GetAxisRaw("Vertical");
         
-        // Flip sprite according to movement
-        if (rb.velocity.x != 0) { sprite.flipX = rb.velocity.x < 0; }
-        if (rb.velocity.x != 0) { sprite.flipY = rb.velocity.y < 0; }
+        // Use Brackey's top-down movement video to implement animations for movement
+        //   https://www.youtube.com/watch?v=whzomFgjT50
+    }
+
+    void FixedUpdate(){
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
     }
 }

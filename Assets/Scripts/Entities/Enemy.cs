@@ -16,7 +16,8 @@ public class Enemy : Entity
     #region Collider methods.
     private void OnPlayerTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        int playerLayer = LayerMask.NameToLayer("Player");
+        if (collider.gameObject.layer == playerLayer)
         {
             Debug.Log("Player entered");
             Entity target = collider.gameObject.GetComponent<Entity>();
@@ -26,7 +27,8 @@ public class Enemy : Entity
 
     private void OnPlayerTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        int playerLayer = LayerMask.NameToLayer("Player");
+        if (collider.gameObject.layer == playerLayer)
         {
             Debug.Log("Player exited");
         }

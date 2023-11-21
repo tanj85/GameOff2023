@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
+    public SpriteRenderer sprite;
     public Rigidbody2D rb;
     public float health;
     public float maxHealth;
@@ -17,7 +18,6 @@ public class Entity : MonoBehaviour
 
     public virtual void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
         healthBar.value = 1;
     }
