@@ -5,16 +5,5 @@ using UnityEngine.UI;
 
 public class Boss : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        health = maxHealth;
-        healthBar.value = health;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

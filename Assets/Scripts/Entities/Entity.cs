@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
+    public Rigidbody2D rb;
     public float health;
     public float maxHealth;
     public float speed;
@@ -16,13 +17,21 @@ public class Entity : MonoBehaviour
 
     public virtual void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         health = maxHealth;
+        healthBar.value = 1;
+    }
+
+    [ContextMenu("Take Damage")]
+    public void TestTakeDamage()
+    {
+        TakeDamage(10);
     }
 
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
-        healthBar.value = health;
+        healthBar.value = health/maxHealth;
         if (health <= 0)
         {
             Die();
