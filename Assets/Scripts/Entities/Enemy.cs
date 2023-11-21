@@ -11,6 +11,8 @@ public class Enemy : Entity
         base.Start();
         playerTriggerResponse.onTriggerEnter2D = OnPlayerTriggerEnter2D;
         playerTriggerResponse.onTriggerExit2D = OnPlayerTriggerExit2D;
+
+        entityType = EntityType.Enemy;
     }
 
     #region Collider methods.

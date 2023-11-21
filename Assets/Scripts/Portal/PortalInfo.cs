@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 [System.Serializable]
 public class PortalInfo
 {
-	public int parentID { get; }
+	public int parentID { get; private set; }
     public List<int> childrenID = new List<int>();
     public int id { get; }
     public int level { get; }
@@ -29,6 +29,11 @@ public class PortalInfo
         dreamEnergy = _dreamEnergy;
         soulCrystals = 0;
         output = 0;
+    }
+
+    public void SetParentID(int _id)
+    {
+        parentID = _id;
     }
 
     public void SetOutput(int _output){

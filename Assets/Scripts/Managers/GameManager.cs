@@ -33,6 +33,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void generateRandomWorld(int level, int dreamEnergy, int? parentID = null, int? childID = null)
+    {
+        int i = 0;
+        while (true)
+        {
+            if (!portalDict.ContainsKey(i)){
+                portalDict.Add(i, new PortalInfo(i, level, Mathf.Pow(10f, level), dreamEnergy));
+                if (parentID.HasValue)
+                {
+                    portalDict[i].SetParentID(parentID.Value);
+                }
+                if (childID.HasValue)
+                {
+                    portalDict[i].childrenID.Add(childID.Value);
+                }
+                break;
+            }
+            i++;
+        }
+    }
+
     // Loads a portal by clearing the current game state to base and then setting up a new world
     public void LoadWorld(PortalInfo portal){
         ClearCurrentWorld();

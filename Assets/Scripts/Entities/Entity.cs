@@ -5,6 +5,14 @@ using UnityEngine.UI;
 
 public class Entity : MonoBehaviour
 {
+    public enum EntityType
+    {
+        Player,
+        Enemy
+    }
+
+    public EntityType entityType;
+
     public SpriteRenderer sprite;
     public Rigidbody2D rb;
     public float health;

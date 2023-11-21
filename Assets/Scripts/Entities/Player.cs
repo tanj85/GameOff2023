@@ -10,6 +10,13 @@ public class Player : Entity
     //public Animator 
     Vector2 movement;
 
+    public override void Start()
+    {
+        base.Start();
+
+        entityType = EntityType.Player;
+    }
+
     void Update()
     {
         // Handle movement
@@ -22,5 +29,9 @@ public class Player : Entity
 
     void FixedUpdate(){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
+    }
+    public override void Die()
+    {
+        base.Die();
     }
 }
