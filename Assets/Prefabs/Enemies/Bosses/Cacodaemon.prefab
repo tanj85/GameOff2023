@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 4607423796889128127}
   - component: {fileID: 6178487515543238375}
   - component: {fileID: 3798294050553365901}
+  - component: {fileID: 8701837629439441253}
   m_Layer: 7
   m_Name: Cacodaemon
   m_TagString: Untagged
@@ -605,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 1
+  state: 0
   sprite: {fileID: 3798294050553365901}
   rb: {fileID: 3994107417476044345}
   health: 500
@@ -614,6 +616,7 @@ MonoBehaviour:
   attackSpeed: 5
   attackRange: 2
   attackCooldown: 5
+  anim: {fileID: 8701837629439441253}
   healthBar: {fileID: 4596681295561425163}
   playerTriggerResponse: {fileID: 3057644734719235521}
 --- !u!212 &3798294050553365901
@@ -668,3 +671,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8701837629439441253
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8237657182416692277}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 511a39371db39e04598394d5ab8adab3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

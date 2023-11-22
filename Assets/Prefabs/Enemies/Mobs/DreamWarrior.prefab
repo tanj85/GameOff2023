@@ -428,6 +428,7 @@ GameObject:
   - component: {fileID: 5867726162582406863}
   - component: {fileID: 7596557161873029607}
   - component: {fileID: 3379680015963073020}
+  - component: {fileID: 1923538266032787900}
   - component: {fileID: 369659918519618545}
   m_Layer: 7
   m_Name: DreamWarrior
@@ -466,6 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 1
+  state: 0
   sprite: {fileID: 3379680015963073020}
   rb: {fileID: 369659918519618545}
   health: 100
@@ -475,6 +477,7 @@ MonoBehaviour:
   attackSpeed: 2
   attackRange: 0
   attackCooldown: 3
+  anim: {fileID: 1923538266032787900}
   healthBar: {fileID: 1734486271001619355}
   playerTriggerResponse: {fileID: 7027856434256026619}
 --- !u!212 &3379680015963073020
@@ -529,6 +532,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1923538266032787900
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9084916475424990219}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 25efe044dc86ad04e992bda1089452e4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &369659918519618545
 Rigidbody2D:
   serializedVersion: 4
@@ -544,7 +568,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

@@ -7,7 +7,6 @@ public class Player : Entity
     public Sprite spriteFaceRight;
     public Sprite spriteFaceDown;
     //public Animator anim;
-    //public Animator 
     Vector2 movement;
 
     public override void Start()
@@ -23,14 +22,19 @@ public class Player : Entity
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         
-        // Use Brackey's top-down movement video to implement animations for movement
-        //   https://www.youtube.com/watch?v=whzomFgjT50
+        //if (movement.x == 0 && movement.y == 0) anim.Play("Idle");
+        if (movement.x != 0){
+            //anim.Play("MoveHorizontal");
+        } else if (movement.y != 0){
+            //anim.Play("MoveVertical");
+        }
+        if (movement.x < 0) {sprite.FlipX = true;} else {sprite.FlipX = false;}
     }
 
     void FixedUpdate(){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
     }
-    
+
     public override void Die()
     {
         base.Die();

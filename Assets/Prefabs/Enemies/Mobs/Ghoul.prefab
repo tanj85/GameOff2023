@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 1353052679479431464}
   - component: {fileID: 2268679009456783854}
   - component: {fileID: 4049217111276760731}
+  - component: {fileID: 6574713314334007066}
   m_Layer: 7
   m_Name: Ghoul
   m_TagString: Untagged
@@ -536,6 +537,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 2
   attackCooldown: 1
+  anim: {fileID: 6574713314334007066}
   healthBar: {fileID: 2514750045032942937}
   playerTriggerResponse: {fileID: 9219090238434699099}
 --- !u!212 &2268679009456783854
@@ -605,7 +607,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -617,6 +619,27 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &6574713314334007066
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9063494834479173019}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 74509509c19f3cc46b4cc7fd45bc4dc5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &9099968987437434114
 GameObject:
   m_ObjectHideFlags: 0

@@ -565,6 +565,7 @@ GameObject:
   - component: {fileID: 941972242223566787}
   - component: {fileID: 8994276962114209044}
   - component: {fileID: 7060746101573517729}
+  - component: {fileID: 5146377198358725455}
   m_Layer: 7
   m_Name: Ghost
   m_TagString: Untagged
@@ -602,6 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 1
+  state: 0
   sprite: {fileID: 8994276962114209044}
   rb: {fileID: 7060746101573517729}
   health: 50
@@ -611,6 +613,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 2
   attackCooldown: 1
+  anim: {fileID: 5146377198358725455}
   healthBar: {fileID: 1237265220969909160}
   playerTriggerResponse: {fileID: 2554295844961264531}
 --- !u!212 &8994276962114209044
@@ -680,7 +683,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -692,3 +695,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &5146377198358725455
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7578090284479425224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50311f37a45a02b4d976901ccaa2db29, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

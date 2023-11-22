@@ -1,0 +1,1262 @@
+fileFormatVersion: 2
+guid: 9ff136fcf96be51489896981bba32fed
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 338
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb4e852fd1118d47af01cd693b52674
+      internalID: -1417393626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 338
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e130a2f1e42ba4f9b38c91526dc3f9
+      internalID: -1002940114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 339
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f6811bd343d49a46a814aaac50149e8
+      internalID: 811774177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 338
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926d8ed1a4f34654d8a182519a82e285
+      internalID: -2136297873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 338
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2384bc124a5ca90439bbf4eb2a39684a
+      internalID: 951475747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 338
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 282eeae6da8296c40ac9039b624f9d1c
+      internalID: 328437833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 338
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8d027cae31f4dd4483347de67a5ae5f
+      internalID: -976081713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 264
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c83b86665be38ad438fc45cdc2973def
+      internalID: -507148622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 264
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c43ac09b8fb7314e84a2379d8441234
+      internalID: -108847545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 264
+        width: 5
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cea95f24dd8f44c9fbf77a22095d37
+      internalID: -1559300407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 264
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146338a273018a64796226ac99cd99a0
+      internalID: -414239496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 264
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef10396e60f5ac545a8a9cdbb7474d02
+      internalID: -86802950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 264
+        width: 36
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b0239c1ee7180e44adde3ab2b1aa31d
+      internalID: -972408568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 264
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287c006b495b01e4ba61beb6ad580c57
+      internalID: -1863416541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 264
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7ba37e75110d946a296b4fd0c84894
+      internalID: -480770650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_4
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 265
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c65987890e9274343a05c6410c6b31cb
+      internalID: 2077570627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 264
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1716ddd53f7c98c409117e279780648d
+      internalID: 2083418071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_6
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 264
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b26b2bfe86d0147854ccafd4ad2f4f
+      internalID: 574989466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Walk_7
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 265
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2635ddc8e5c643b40ae0e700df5f534e
+      internalID: -1793503847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 185
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3bd22aee143814faeb11a02062d6e6
+      internalID: 862946051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 185
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd953fc221324744bf789dcc5fd05ff
+      internalID: 295921244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 185
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63208bc31f0f2349923baf21d2622f4
+      internalID: 1524444579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Run_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 186
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b23d9fa2163844687b10540a9811c9
+      internalID: 99598395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Run_1
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 185
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da24fb79e0b577459f2a27b4442908e
+      internalID: 1935879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Run_2
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 185
+        width: 51
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c513b3b0ee201a14789a17c751b598eb
+      internalID: -935035988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Run_3
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 185
+        width: 50
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9d8050a56906a45b34902120e2a941
+      internalID: -32734551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Run_4
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 185
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce8e903b6ada7da44a8e5bbfdb725119
+      internalID: -86465277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Run_5
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 185
+        width: 49
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45f17730106173f4099cce179e5c7a12
+      internalID: 674970164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 133
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db962dc07847274489dc3e81ea2be67b
+      internalID: 1825706408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 133
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39007c44f0f44ae49af06a48d8b2b844
+      internalID: -274773648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 133
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8aa373ec6221945b2ae5b58df7e49e
+      internalID: 3220579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_RunAttack_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 113
+        width: 76
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e2b42c2b42d0f41ae5a285b565981b
+      internalID: 63264113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_RunAttack_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 113
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a1a6f42c281c6743bd239e59c09b750
+      internalID: 1984638848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_RunAttack_2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 113
+        width: 63
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d50c170a56ced4d4fbdcd2bc849dcb34
+      internalID: 343953727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_RunAttack_3
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 113
+        width: 62
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d439a3018a561d4ab7dc1de02a979a8
+      internalID: -586330959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 113
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c24ed96f7480534448b13e6ee0dcbb5a
+      internalID: -687939215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 113
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584fabb0a5f028a4a8db51f7e99ac72e
+      internalID: 1899355983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 113
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe83780c0f89e24c9fa7fb63a4c998d
+      internalID: 1073947396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 113
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d206e4ca0fb144f87358bf52b03809
+      internalID: -941239314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 113
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1034601a51fa1d4bbff1db13867432c
+      internalID: -1640615000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 40
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9162ff6ec694a943a3e67c996909e86
+      internalID: 1880903852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 40
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a61152b266b18164c8cdcb5cdaf4240d
+      internalID: 990879477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 40
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48d81fb3e60f034b8fc6c5f47de3bc0
+      internalID: 226036762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 40
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22635c914e8e828488c2a028d11320f0
+      internalID: 1847937771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 40
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29efb401758986b4f8d2c02064354f0b
+      internalID: 246241880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 40
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80649f01d6d6d0d448cfa4b2269499ba
+      internalID: 1443350627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dream_warrior_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 40
+        width: 4
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01e06fd045d16b74eb37a4fd15796d39
+      internalID: 1801595091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 40
+        width: 61
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2286b8340144db245a782e798b39402d
+      internalID: -200928925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 41
+        width: 61
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42e6c049bf288a4ea2221ba503e5860
+      internalID: -704716509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 40
+        width: 63
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0de7cb347ecdf84d9bd789b9bd728a2
+      internalID: -1873295769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DreamWarrior_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 40
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62e7c6c29085b8c43b402d6f5e0603bf
+      internalID: -482352115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DreamWarrior_Attack_0: -200928925
+      DreamWarrior_Attack_1: -704716509
+      DreamWarrior_Attack_2: -1873295769
+      DreamWarrior_Attack_3: -482352115
+      DreamWarrior_Idle_0: -2136297873
+      DreamWarrior_Idle_1: 951475747
+      DreamWarrior_Idle_2: 328437833
+      DreamWarrior_Idle_3: -976081713
+      DreamWarrior_RunAttack_0: 63264113
+      DreamWarrior_RunAttack_1: 1984638848
+      DreamWarrior_RunAttack_2: 343953727
+      DreamWarrior_RunAttack_3: -586330959
+      DreamWarrior_Run_0: 99598395
+      DreamWarrior_Run_1: 1935879
+      DreamWarrior_Run_2: -935035988
+      DreamWarrior_Run_3: -32734551
+      DreamWarrior_Run_4: -86465277
+      DreamWarrior_Run_5: 674970164
+      DreamWarrior_Walk_0: -86802950
+      DreamWarrior_Walk_1: -972408568
+      DreamWarrior_Walk_2: -1863416541
+      DreamWarrior_Walk_3: -480770650
+      DreamWarrior_Walk_4: 2077570627
+      DreamWarrior_Walk_5: 2083418071
+      DreamWarrior_Walk_6: 574989466
+      DreamWarrior_Walk_7: -1793503847
+      dream_warrior_spritesheet_0: -1417393626
+      dream_warrior_spritesheet_1: -1002940114
+      dream_warrior_spritesheet_10: -414239496
+      dream_warrior_spritesheet_19: 862946051
+      dream_warrior_spritesheet_2: 811774177
+      dream_warrior_spritesheet_20: 295921244
+      dream_warrior_spritesheet_21: 1524444579
+      dream_warrior_spritesheet_28: 1825706408
+      dream_warrior_spritesheet_29: -274773648
+      dream_warrior_spritesheet_30: 3220579
+      dream_warrior_spritesheet_35: -687939215
+      dream_warrior_spritesheet_36: 1899355983
+      dream_warrior_spritesheet_37: 1073947396
+      dream_warrior_spritesheet_38: -941239314
+      dream_warrior_spritesheet_39: -1640615000
+      dream_warrior_spritesheet_40: 1880903852
+      dream_warrior_spritesheet_41: 990879477
+      dream_warrior_spritesheet_42: 226036762
+      dream_warrior_spritesheet_43: 1847937771
+      dream_warrior_spritesheet_44: 246241880
+      dream_warrior_spritesheet_45: 1443350627
+      dream_warrior_spritesheet_46: 1801595091
+      dream_warrior_spritesheet_7: -507148622
+      dream_warrior_spritesheet_8: -108847545
+      dream_warrior_spritesheet_9: -1559300407
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

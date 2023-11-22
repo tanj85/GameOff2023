@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Entity : MonoBehaviour
+public abstract class Entity : MonoBehaviour
 {
     public enum EntityType
     {
@@ -11,7 +11,17 @@ public class Entity : MonoBehaviour
         Enemy
     }
 
+    public enum State
+    {
+        Moving,
+        Attacking,
+        Damaged,
+        Idle,
+        Dead,
+    }
+
     public EntityType entityType;
+    public State state;
 
     public SpriteRenderer sprite;
     public Rigidbody2D rb;
@@ -22,6 +32,7 @@ public class Entity : MonoBehaviour
     public float attackSpeed;
     public float attackRange;
     public float attackCooldown;
+    public Animator anim;
     public Slider healthBar;
 
     public virtual void Start()
@@ -40,6 +51,8 @@ public class Entity : MonoBehaviour
     {
         health -= damage;
         healthBar.value = health/maxHealth;
+        state = State.Damaged;
+        anim.Play("Damaged");
         if (health <= 0)
         {
             Die();
@@ -48,12 +61,18 @@ public class Entity : MonoBehaviour
 
     public virtual void DealDamage(float damage, Entity target)
     {
+        Debug.Log("state is " + state);
         target.TakeDamage(damage);
+        state = State.Attacking;
+        Debug.Log("state is " + state);
+        anim.Play("Attack");
     }
 
     public virtual void Die()
     {
         Destroy(gameObject);
+        state = State.Dead;
+        anim.Play("Death");
         // TODO: Drop loot
     }
 

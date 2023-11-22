@@ -186,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ghoul_3
+      name: Ghoul_Idle_3
       rect:
         serializedVersion: 2
         x: 98
@@ -721,7 +721,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ghoul_3: 2037275593
       Ghoul_Attack_0: -859832561
       Ghoul_Attack_1: 607706267
       Ghoul_Attack_2: 721710001
@@ -741,6 +740,7 @@ TextureImporter:
       Ghoul_Idle_0: -1908871862
       Ghoul_Idle_1: 489036969
       Ghoul_Idle_2: -200632526
+      Ghoul_Idle_3: 2037275593
       Ghoul_Movement_0: -829071430
       Ghoul_Movement_1: -1104096498
       Ghoul_Movement_2: 1419615169
