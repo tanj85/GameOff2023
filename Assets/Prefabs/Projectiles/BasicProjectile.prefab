@@ -197,5 +197,5 @@ MonoBehaviour:
   direction: {x: 0, y: 0}
   damage: 30
   affectedTypes: 01000000
-  range: 5
+  range: 20
   pierce: 2
