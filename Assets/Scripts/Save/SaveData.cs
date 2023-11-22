@@ -19,8 +19,6 @@ public class SaveData
 public class PlayerData
 {
     public List<InventoryItemData> inventoryItemDatas; // a list of all the items that the player has in the inventory
-    public int numSoulCrystals; // number of soul crystals player has
-    public int numDreamEnergy; // number of dream energy player has
     public Vector3 position; // location of the player
 }
 

@@ -9,6 +9,7 @@ public class DreamEnergyUI : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.Log("DreamEnergyUI enabled");
         PortalInfo.onResourceChange += changeEnergyText;
     }
     private void OnDisable()
@@ -18,6 +19,7 @@ public class DreamEnergyUI : MonoBehaviour
 
     private void changeEnergyText(int _dreamEnergy, int _soulCrystal)
     {
+        Debug.Log($"DreamEnergyUI changeEnergyText called, dream energy: {_dreamEnergy}");
         dreamEnergyText.text = _dreamEnergy.ToString();
     }
 }

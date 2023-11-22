@@ -12,7 +12,6 @@ public class Mob : Enemy
         playerTriggerResponse.onTriggerEnter2D = OnPlayerTriggerEnter2D;
         playerTriggerResponse.onTriggerExit2D = OnPlayerTriggerExit2D;
         playerTriggerResponse.onTriggerStay2D = OnPlayerTriggerStay2D;
-        Debug.Log($"player trigger response: {playerTriggerResponse.onTriggerStay2D}");
         player = GameObject.FindGameObjectWithTag("Player");
 
         entityType = EntityType.Enemy;

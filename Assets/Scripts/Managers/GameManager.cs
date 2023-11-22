@@ -39,6 +39,10 @@ public class GameManager : MonoBehaviour
         {
             LoadWorld(portalDict[1]);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            TestUpdateResource();
+        }
     }
 
     public void GenerateRandomWorld(int level, int dreamEnergy, int? parentID = null, int? childID = null)
@@ -123,9 +127,10 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            // If no saves on file, the below lines of code are called
             // Load in the scene
             // Setting initial amount of dream energy and soul crystals to 0 because I don't know how much to give player at the beginning
-            GenerateRandomWorld(1, 0, 0);
+            GenerateRandomWorld(1, 0);
             currentPortal = portalDict[0];
             LoadWorld(currentPortal);
         }
@@ -157,8 +162,6 @@ public class GameManager : MonoBehaviour
         PlayerData playerData = new PlayerData();
 
         // playerData.inventoryItemDatas = new List<InventoryItemData>(inventory.numInventorySlots); // Use and expand this line of code in the future if we implement an inventory system
-        playerData.numSoulCrystals = portalDict[currentPortal.id].soulCrystals;
-        playerData.numDreamEnergy = portalDict[currentPortal.id].dreamEnergy;
         playerData.position = player.transform.position;
 
         newSave.playerData = playerData;
@@ -179,6 +182,7 @@ public class GameManager : MonoBehaviour
     [ContextMenu("Update Resource")]
     public void TestUpdateResource()
     {
+        Debug.Log("triggering invoke resource change");
         currentPortal.InvokeResourceChange();
     }
 }
