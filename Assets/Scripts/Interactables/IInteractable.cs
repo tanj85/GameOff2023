@@ -9,18 +9,22 @@ public interface IInteractable
     bool active { get; set; }
     void Interact();
 
+    void CleanSelf();
+
+    void SaveSelf();
+
     // function to toggle hover interactable behavior. For example, if you walk next to a totem, it should
     // somehow denote that it is interactable.
     public void hoverInteract(bool toggle)
     {
-        if (toggle)
-        {
-            Debug.Log("interactable on");
-        }
-        else
-        {
-            Debug.Log("interactable off");
-        }
+        //if (toggle)
+        //{
+        //    Debug.Log("interactable on");
+        //}
+        //else
+        //{
+        //    Debug.Log("interactable off");
+        //}
     }
 
     public static IInteractable GrabTargetInteractableOrParentReferenceInteractable(GameObject target)

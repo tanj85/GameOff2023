@@ -49,5 +49,9 @@ public class CameraController : MonoBehaviour
                 cam.transform.position = new Vector3(player.position.x, player.position.y, transform.position.z);
             }
         }
+        else
+        {
+            player = GameObject.FindGameObjectWithTag("Player").transform; 
+        }
     }
 }

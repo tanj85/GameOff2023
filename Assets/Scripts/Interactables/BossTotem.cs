@@ -12,6 +12,18 @@ public class BossTotem : MonoBehaviour, IInteractable
     public bool active { get; set; }
 
     public GameObject boss;
+    public Boss.Bosses bossEnum;
+
+    public int cost;
+    public int reward;
+
+    public void Initialize(Boss.Bosses _boss, int _cost, int _reward)
+    {
+        bossEnum = _boss;
+        boss = GameManager.Instance.bossPrefabDictionary[_boss];
+        cost = _cost;
+        reward = _reward;
+    }
 
     void Start()
     {
@@ -41,11 +53,40 @@ public class BossTotem : MonoBehaviour, IInteractable
     {
         onBossStart += DisableTotemFunction;
         Boss.onBossStop += EnableTotemFunction;
+        GameManager.onCleanWorld += CleanSelf;
+        GameManager.onSave += SaveSelf;
     }
 
     void OnDisable()
     {
         onBossStart -= DisableTotemFunction;
         Boss.onBossStop -= EnableTotemFunction;
+        GameManager.onCleanWorld -= CleanSelf;
+        GameManager.onSave -= SaveSelf;
+    }
+
+    public BossTotemInfo ConvertToInteractableInfo()
+    {
+        BossTotemInfo info = new BossTotemInfo();
+
+        info.location = transform.position;
+        info.interactableType = InteractableInfo.InteractableType.BossTotem;
+        info.cost = cost;
+        info.heldBoss = bossEnum;
+        info.reward = reward;
+
+        return info;
+    }
+
+    public void CleanSelf()
+    {
+        GameManager.Instance.currentPortal.bossTotemInfos.Add(ConvertToInteractableInfo());
+
+        Destroy(gameObject);
+    }
+
+    public void SaveSelf()
+    {
+        GameManager.Instance.currentPortal.bossTotemInfos.Add(ConvertToInteractableInfo());
     }
 }

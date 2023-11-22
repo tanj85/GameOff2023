@@ -19,9 +19,8 @@ public class PortalInfo
     public delegate void OnResourceChange(int _dreamEnergy, int _soulCrystals);
     public static event OnResourceChange onResourceChange;
 
-    // private List<Boss> bosses;
-
-    // private List<LevelObjects> AllObjects;
+    public List<BossTotemInfo> bossTotemInfos = new List<BossTotemInfo>();
+    public List<PortalInteractableInfo> portalInteractableInfos = new List<PortalInteractableInfo>();
 
     public PortalInfo(int _id, int _level, float _difficultyMultiplier, int _dreamEnergy){
         id = _id;
@@ -50,6 +49,12 @@ public class PortalInfo
     public void SetDreamEnergy(int _dreamEnergy){
         dreamEnergy = _dreamEnergy;
         onResourceChange?.Invoke(dreamEnergy, soulCrystals);
+    }
+
+    public void clearAllInteractableLists()
+    {
+        bossTotemInfos = new List<BossTotemInfo>();
+        portalInteractableInfos = new List<PortalInteractableInfo>();
     }
 
     public void InvokeResourceChange()

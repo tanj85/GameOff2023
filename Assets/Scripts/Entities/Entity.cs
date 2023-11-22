@@ -43,6 +43,16 @@ public abstract class Entity : MonoBehaviour
         ;
     }
 
+    protected virtual void OnEnable()
+    {
+        GameManager.onCleanWorld += Delete;
+    }
+
+    protected virtual void OnDisable()
+    {
+        GameManager.onCleanWorld -= Delete;
+    }
+
     [ContextMenu("Take Damage")]
     public void TestTakeDamage()
     {

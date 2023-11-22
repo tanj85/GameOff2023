@@ -10,9 +10,26 @@ public class GameManager : MonoBehaviour
 
     public PortalInfo currentPortal = null;
 
-    public Dictionary<int, PortalInfo> portalDict = new Dictionary<int, PortalInfo>();
+    public delegate void OnSetupWorld();
+    public static event OnSetupWorld onSetupWorld;
 
-    public GameObject player;
+    public delegate void OnCleanWorld();
+    public static event OnCleanWorld onCleanWorld;
+
+    public delegate void OnSave();
+    public static event OnSave onSave;
+
+    public Dictionary<int, PortalInfo> portalDict = new Dictionary<int, PortalInfo>();
+    
+    public Dictionary<Boss.Bosses, GameObject> bossPrefabDictionary = new Dictionary<Boss.Bosses, GameObject>();
+    public List<BossLinker> bossLinkers;
+
+    public Dictionary<InteractableInfo.InteractableType, GameObject> interactableDictionary = new Dictionary<InteractableInfo.InteractableType, GameObject>();
+    public List<InteractableLinker> interactableLinkers;
+
+    private GameObject player;
+
+    public GameObject playerPrefab;
 
     public SaveData currSaveData;
     
@@ -24,9 +41,17 @@ public class GameManager : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(_instance);
         }
+
+        foreach (BossLinker linker in bossLinkers)
+        {
+            bossPrefabDictionary.Add(linker.boss, linker.bossPrefab);
+        }
+
+        foreach (InteractableLinker linker in interactableLinkers)
+        {
+            interactableDictionary.Add(linker.interactableType, linker.interactablePrefab);
+        }
     }
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +80,27 @@ public class GameManager : MonoBehaviour
         {
             TestUpdateResource();
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            player = GetPlayer();
+            GameObject interactable = Instantiate(
+                interactableDictionary[InteractableInfo.InteractableType.Portal], 
+                new Vector2(Random.Range(-3, 3), Random.Range(-3, 3)) + (Vector2) player.transform.position, Quaternion.identity);
+            interactable.GetComponent<Portal>().Initialize(currentPortal.id == 0? 1 : 0, true);
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            player = GetPlayer();
+            GameObject interactable = Instantiate(
+                interactableDictionary[InteractableInfo.InteractableType.BossTotem],
+                new Vector2(Random.Range(-3, 3), Random.Range(-3, 3)) + (Vector2) player.transform.position, Quaternion.identity);
+            interactable.GetComponent<BossTotem>().Initialize(Boss.Bosses.TestBoss, 0, 0);
+        }
+    }
+
+    public GameObject GetPlayer()
+    {
+        return GameObject.FindGameObjectWithTag("Player");
     }
 
     public void GenerateRandomWorld(int level, int dreamEnergy, int? parentID = null, int? childID = null)
@@ -80,8 +126,9 @@ public class GameManager : MonoBehaviour
 
     // Loads a portal by clearing the current game state to base and then setting up a new world
     public void LoadWorld(PortalInfo portal){
+        PortalInfo lastPortal = currentPortal;
         ClearCurrentWorld();
-        SetupWorld(portal);
+        SetupWorld(portal, lastPortal);
     }
 
     /*
@@ -91,15 +138,36 @@ public class GameManager : MonoBehaviour
      * 3. Instantiate all the interactables on the level
      * 4. Instantiate the Player
      */
-    private void SetupWorld(PortalInfo portal)
+    private void SetupWorld(PortalInfo portal, PortalInfo lastPortal)
     {
         currentPortal = portal;
+        Vector2 entryPortalLocation = Vector2.zero;
 
         currentPortal.InvokeResourceChange();
         //update world look?
 
+        //Debug.Log(portal.bossTotemInfos.Count);
+
         // Instantiate interactables
+        foreach (BossTotemInfo info in currentPortal.bossTotemInfos)
+        {
+            GameObject interactable = Instantiate(interactableDictionary[info.interactableType], info.location, Quaternion.identity);
+            interactable.GetComponent<BossTotem>().Initialize(info.heldBoss, info.cost, info.reward);
+
+        }
+        foreach (PortalInteractableInfo info in currentPortal.portalInteractableInfos)
+        {
+            GameObject interactable = Instantiate(interactableDictionary[info.interactableType], info.location, Quaternion.identity);
+            interactable.GetComponent<Portal>().Initialize(info.sendWorldID, info.hasSendWorld);
+
+            if (info.sendWorldID == lastPortal?.id)
+            {
+                entryPortalLocation = info.location;
+            }
+
+        }
         // Instantiate player
+        Instantiate(playerPrefab, entryPortalLocation, Quaternion.identity);
     }
 
 
@@ -110,6 +178,10 @@ public class GameManager : MonoBehaviour
     private void ClearCurrentWorld(){
         // Destroy active entities
         // Destroy interactables
+        currentPortal.clearAllInteractableLists();
+
+        onCleanWorld?.Invoke();
+        
         currentPortal = null;
     }
 
@@ -126,11 +198,17 @@ public class GameManager : MonoBehaviour
         if(currSaveData != null)
         {
             // Read in the portal dictionary from the save data
-            portalDict = currSaveData.portalIDs.Zip(currSaveData.portalInfos, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v);
+            portalDict = new Dictionary<int, PortalInfo>();
+            //portalDict = currSaveData.portalIDs.Zip(currSaveData.portalInfos, (k, v) => new { k, v }).ToDictionary(x => x.k, x => x.v);
+
+            foreach (PortalInfo portalInfo in currSaveData.portalInfos)
+            {
+                portalDict[portalInfo.id] = portalInfo;
+            }
 
             // Load in current level
-            currentPortal = portalDict[currSaveData.currLevelID];
-            LoadWorld(currentPortal);
+            //Debug.Log(portalDict[currSaveData.currLevelID].bossTotemInfos.Count + "|" + currSaveData.currLevelID);
+            LoadWorld(portalDict[currSaveData.currLevelID]);
 
             // Initialize player position from player position in currSaveData
             Vector3 position = currSaveData.playerData.position;
@@ -155,6 +233,8 @@ public class GameManager : MonoBehaviour
     // This function is subject to change and finalization as number of save variables increase!
     public void CreateNewSave(int saveIndex)
     {
+        currentPortal.clearAllInteractableLists();
+        onSave?.Invoke();
         SaveData newSave = new SaveData();
 
         // deal with portal data
@@ -171,6 +251,9 @@ public class GameManager : MonoBehaviour
 
         // deal with player data
         PlayerData playerData = new PlayerData();
+
+        // find player in scene
+        player = GameObject.FindGameObjectWithTag("Player");
 
         // playerData.inventoryItemDatas = new List<InventoryItemData>(inventory.numInventorySlots); // Use and expand this line of code in the future if we implement an inventory system
         playerData.position = player.transform.position;

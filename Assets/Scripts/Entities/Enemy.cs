@@ -13,7 +13,7 @@ public abstract class Enemy : Entity
         int playerLayer = LayerMask.NameToLayer("Player");
         if (collider.gameObject.layer == playerLayer)
         {
-            Debug.Log("Player entered");
+            //Debug.Log("Player entered");
         }
     }
 
@@ -36,7 +36,7 @@ public abstract class Enemy : Entity
         int playerLayer = LayerMask.NameToLayer("Player");
         if (collider.gameObject.layer == playerLayer)
         {
-            Debug.Log("Player exited");
+            //Debug.Log("Player exited");
         }
     }
     #endregion

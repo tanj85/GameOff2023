@@ -44,3 +44,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23dece387782d76429ed99880dbd5f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentPortal:
+    hasParent: 0
+    parentID: 0
+    childrenID: 
+    id: 0
+    level: 0
+    difficultyMultiplier: 0
+    dreamEnergy: 0
+    soulCrystals: 0
+    output: 0
+  bossLinkers:
+  - boss: 0
+    bossPrefab: {fileID: 1566641246448889684, guid: b637eefd6474de349945a3018d340027, type: 3}
+  interactableLinkers:
+  - interactableType: 0
+    interactablePrefab: {fileID: 4877906130345106585, guid: 8a20007af7c753943ae7adeddfa9b3cb, type: 3}
+  - interactableType: 1
+    interactablePrefab: {fileID: 7282101813538974708, guid: 0979ee7910c32524097b7777c5a6782d, type: 3}
+  player: {fileID: 0}
+  playerPrefab: {fileID: 9158768214411622648, guid: 246d6b743011dd843a34224a7da792d3, type: 3}
+  currSaveData:
+    portalIDs: 
+    portalInfos: []
+    currLevelID: 0
+    playerData:
+      inventoryItemDatas: []
+      position: {x: 0, y: 0, z: 0}

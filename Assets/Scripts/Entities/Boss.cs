@@ -21,6 +21,10 @@ public class Boss : Enemy
 
     public delegate void OnBossStop();
     public static event OnBossDie onBossStop;
+    public enum Bosses
+    {
+        TestBoss
+    }
 
     public override void Start()
     {

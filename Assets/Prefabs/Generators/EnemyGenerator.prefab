@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 9063494834479173019, guid: d4b500c3c16804842871bc8882349182, type: 3}
   enemySpawnWeights:
   - 0.2
-  - 0.5
+  - 0
   - 0.3
   timeUntilSpawn: 0
   minimumSpawnTime: 5
