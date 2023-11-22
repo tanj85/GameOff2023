@@ -528,17 +528,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   entityType: 1
+  state: 0
   sprite: {fileID: 2268679009456783854}
   rb: {fileID: 4049217111276760731}
   health: 50
   maxHealth: 50
   speed: 1
   attackDamage: 20
-  attackSpeed: 1
-  attackRange: 2
-  attackCooldown: 1
+  attackCooldown: 1.5
   anim: {fileID: 6574713314334007066}
   healthBar: {fileID: 2514750045032942937}
+  player: {fileID: 0}
   playerTriggerResponse: {fileID: 9219090238434699099}
 --- !u!212 &2268679009456783854
 SpriteRenderer:

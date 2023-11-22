@@ -610,11 +610,10 @@ MonoBehaviour:
   maxHealth: 50
   speed: 1
   attackDamage: 20
-  attackSpeed: 1
-  attackRange: 2
-  attackCooldown: 1
+  attackCooldown: 1.5
   anim: {fileID: 5146377198358725455}
   healthBar: {fileID: 1237265220969909160}
+  player: {fileID: 0}
   playerTriggerResponse: {fileID: 2554295844961264531}
 --- !u!212 &8994276962114209044
 SpriteRenderer:

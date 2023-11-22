@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Enemy : Entity
 {
     [HideInInspector] public GameObject player;
+    [SerializeField]float timer = 0f;
 
     #region Collider methods.
     public virtual void OnPlayerTriggerEnter2D(Collider2D collider)
@@ -13,8 +14,20 @@ public abstract class Enemy : Entity
         if (collider.gameObject.layer == playerLayer)
         {
             Debug.Log("Player entered");
+        }
+    }
+
+    public virtual void OnPlayerTriggerStay2D(Collider2D collider)
+    {
+        int playerLayer = LayerMask.NameToLayer("Player");
+        if (collider.gameObject.layer == playerLayer)
+        {
             Entity target = collider.gameObject.GetComponent<Entity>();
-            DealDamage(attackDamage, target);
+            timer += Time.deltaTime;
+            if (timer >= attackCooldown){
+                DealDamage(attackDamage, target);
+                timer = 0f;
+            }
         }
     }
 
@@ -41,6 +54,6 @@ public abstract class Enemy : Entity
         } else {
             sprite.flipX = false;
         }
-        anim.Play("Movement");
+        if (anim != null) anim.Play("Movement");
     }
 }

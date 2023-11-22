@@ -35,11 +35,6 @@ public class Player : Entity
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
     }
 
-    void OnTriggerStay2D(Collider2D collision)
-    {
-        
-    }
-
     public override void Die()
     {
         base.Die();

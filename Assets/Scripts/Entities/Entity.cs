@@ -22,15 +22,12 @@ public abstract class Entity : MonoBehaviour
 
     public EntityType entityType;
     public State state;
-
     public SpriteRenderer sprite;
     public Rigidbody2D rb;
     public float health;
     public float maxHealth;
     public float speed;
     public float attackDamage;
-    public float attackSpeed;
-    public float attackRange;
     public float attackCooldown;
     public Animator anim;
     public Slider healthBar;
@@ -57,7 +54,7 @@ public abstract class Entity : MonoBehaviour
         health -= damage;
         healthBar.value = health/maxHealth;
         state = State.Damaged;
-        anim.Play("Damaged");
+        if (anim != null) anim.Play("Damaged");
         if (health <= 0)
         {
             Die();
@@ -66,18 +63,16 @@ public abstract class Entity : MonoBehaviour
 
     public virtual void DealDamage(float damage, Entity target)
     {
-        Debug.Log("state is " + state);
         target.TakeDamage(damage);
         state = State.Attacking;
-        Debug.Log("state is " + state);
-        anim.Play("Attack");
+        if (anim != null) anim.Play("Attack");
     }
 
     public virtual void Die()
     {
         Destroy(gameObject);
         state = State.Dead;
-        anim.Play("Death");
+        if (anim != null) anim.Play("Death");
         // TODO: Drop loot
     }
 

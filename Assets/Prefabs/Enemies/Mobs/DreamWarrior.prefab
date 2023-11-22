@@ -474,11 +474,10 @@ MonoBehaviour:
   maxHealth: 100
   speed: 1
   attackDamage: 20
-  attackSpeed: 2
-  attackRange: 0
-  attackCooldown: 3
+  attackCooldown: 1.5
   anim: {fileID: 1923538266032787900}
   healthBar: {fileID: 1734486271001619355}
+  player: {fileID: 0}
   playerTriggerResponse: {fileID: 7027856434256026619}
 --- !u!212 &3379680015963073020
 SpriteRenderer:
@@ -521,7 +520,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -807297202, guid: 0ad6632d914f4ec48a7598b14e32934a, type: 3}
+  m_Sprite: {fileID: -2136297873, guid: 9ff136fcf96be51489896981bba32fed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
