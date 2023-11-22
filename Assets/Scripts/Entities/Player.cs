@@ -28,7 +28,7 @@ public class Player : Entity
         } else if (movement.y != 0){
             //anim.Play("MoveVertical");
         }
-        if (movement.x < 0) {sprite.FlipX = true;} else {sprite.FlipX = false;}
+        if (movement.x < 0) {sprite.flipX = true;} else {sprite.flipX = false;}
     }
 
     void FixedUpdate(){
