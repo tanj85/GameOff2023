@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Boss : Enemy
 {
+    public TriggerResponse playerTriggerResponse;
+
     public float maxKillTime;
     public float killTimer;
 
@@ -20,13 +22,23 @@ public class Boss : Enemy
     public delegate void OnBossStop();
     public static event OnBossDie onBossStop;
 
-    //public override void Start()
-    //{
+    public override void Start()
+    {
+        base.Start();
+        playerTriggerResponse.onTriggerEnter2D = OnPlayerTriggerEnter2D;
+        playerTriggerResponse.onTriggerExit2D = OnPlayerTriggerExit2D;
+        player = GameObject.FindGameObjectWithTag("Player");
 
-    //}
+        entityType = EntityType.Enemy;
+    }
 
     public override void Update()
     {
+        if (player != null)
+        {
+            FollowPlayer();
+        }
+
         killTimer -= Time.deltaTime;
         onBossTimerChange?.Invoke(killTimer, maxKillTime);
 
@@ -59,6 +71,7 @@ public class Boss : Enemy
     public override void Die()
     {
         onBossDie?.Invoke();
+        onBossStop?.Invoke();
 
         //drop loot
         //spawn portal

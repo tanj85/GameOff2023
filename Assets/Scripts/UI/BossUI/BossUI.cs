@@ -12,14 +12,12 @@ public class BossUI : MonoBehaviour
     {
         gameObject.SetActive(false);
         BossTotem.onBossStart += OnBossStart;
-        Boss.onBossDie += OnBossDie;
         Boss.onBossStop += OnBossDie;
     }
 
     void OnDestroy()
     {
         BossTotem.onBossStart -= OnBossStart;
-        Boss.onBossDie -= OnBossDie;
         Boss.onBossStop -= OnBossDie;
     }
 

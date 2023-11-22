@@ -11,6 +11,8 @@ public class BossTotem : MonoBehaviour, IInteractable
 
     public bool active { get; set; }
 
+    public GameObject boss;
+
     void Start()
     {
         active = true;
@@ -18,11 +20,11 @@ public class BossTotem : MonoBehaviour, IInteractable
 
     void IInteractable.Interact()
     {
-        if (active == false)
+        if (active == true)
         {
-            return;
+            Instantiate(boss, transform.position, Quaternion.identity);
+            onBossStart.Invoke();
         }
-        onBossStart.Invoke();
     }
 
     public void DisableTotemFunction()
@@ -38,10 +40,12 @@ public class BossTotem : MonoBehaviour, IInteractable
     void OnEnable()
     {
         onBossStart += DisableTotemFunction;
+        Boss.onBossStop += EnableTotemFunction;
     }
 
     void OnDisable()
     {
         onBossStart -= DisableTotemFunction;
+        Boss.onBossStop -= EnableTotemFunction;
     }
 }

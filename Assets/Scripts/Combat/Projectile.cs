@@ -39,6 +39,10 @@ public abstract class Projectile : MonoBehaviour
 
     protected virtual void OnHit(Entity entity)
     {
+        if (!entity)
+        {
+            return;
+        }
         if (affectedTypes.Contains(entity.entityType))
         {
             entity.TakeDamage(damage);

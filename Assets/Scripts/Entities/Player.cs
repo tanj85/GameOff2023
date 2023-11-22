@@ -9,6 +9,9 @@ public class Player : Entity
     //public Animator anim;
     Vector2 movement;
 
+    private IInteractable currentInteractable;
+    private bool nearInteractable = false;
+
     public override void Start()
     {
         base.Start();
@@ -28,11 +31,41 @@ public class Player : Entity
         } else if (movement.y != 0){
             //anim.Play("MoveVertical");
         }
-        if (movement.x < 0) {sprite.flipX = true;} else {sprite.flipX = false;}
+        if (movement.x < 0) {sprite.flipX = true;} else {sprite.flipX = false; }
+
+        if (nearInteractable && Input.GetKeyDown(KeyCode.E))
+        {
+            currentInteractable?.Interact();
+        }
     }
 
     void FixedUpdate(){
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
+        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        IInteractable interactable = IInteractable.GrabTargetInteractableOrParentReferenceInteractable(collision.gameObject);
+        if (interactable != null)
+        {
+            currentInteractable = interactable;
+            nearInteractable = true;
+            currentInteractable.hoverInteract(true);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        IInteractable interactable = IInteractable.GrabTargetInteractableOrParentReferenceInteractable(collision.gameObject);
+        if (interactable != null)
+        {
+            currentInteractable.hoverInteract(false);
+            if (currentInteractable == interactable)
+            {
+                nearInteractable = false;
+                currentInteractable = null;
+            }
+        }
     }
 
     public override void Die()
