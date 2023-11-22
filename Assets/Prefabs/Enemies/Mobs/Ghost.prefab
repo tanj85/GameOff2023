@@ -614,7 +614,11 @@ MonoBehaviour:
   anim: {fileID: 5146377198358725455}
   healthBar: {fileID: 1237265220969909160}
   player: {fileID: 0}
+  timer: 0
   playerTriggerResponse: {fileID: 2554295844961264531}
+  numSoulCrystalsToDrop: 1
+  numCrystalsPerDrop: 3
+  soulCrystalPrefab: {fileID: 8226501869799732712, guid: 7da367381dae317438200d6f04795d1e, type: 3}
 --- !u!212 &8994276962114209044
 SpriteRenderer:
   m_ObjectHideFlags: 0

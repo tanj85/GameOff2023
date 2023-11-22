@@ -5,6 +5,9 @@ using UnityEngine;
 public class Mob : Enemy
 {
     public TriggerResponse playerTriggerResponse;
+    public int numSoulCrystalsToDrop;
+    public int numCrystalsPerDrop;
+    public GameObject soulCrystalPrefab;
 
       public override void Start()
     {
@@ -25,6 +28,23 @@ public class Mob : Enemy
             } else {
                 FollowPlayer();
             }
+        }
+    }
+
+    public override void Die(){
+        base.Die();
+        DropSoulCrystals(numSoulCrystalsToDrop, numCrystalsPerDrop);
+    }
+
+    public void DropSoulCrystals(int numSoulCrystalsToDrop, int numCrystalsPerDrop){
+        float xRange = 0.5f;
+        float yRange = 0.5f;
+        for (int i = 0; i < numSoulCrystalsToDrop; i++){
+            float xOffset = Random.Range(-xRange, xRange);
+            float yOffset = Random.Range(-yRange, yRange);
+            Vector3 spawnPosition = new Vector3(transform.position.x + xOffset, transform.position.y + yOffset, transform.position.z);
+            GameObject soulCrystal = Instantiate(soulCrystalPrefab, spawnPosition, Quaternion.identity);
+            soulCrystal.GetComponent<SoulCrystal>().soulCrystals = numCrystalsPerDrop;
         }
     }
 }

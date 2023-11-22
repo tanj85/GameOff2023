@@ -16,6 +16,18 @@ public class GameManager : MonoBehaviour
 
     public SaveData currSaveData;
     
+    void Awake() {
+        if (_instance != null && _instance != this) {
+            Destroy(this.gameObject);
+        }
+        else {
+            _instance = this;
+            DontDestroyOnLoad(_instance);
+        }
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -119,7 +131,6 @@ public class GameManager : MonoBehaviour
             // Load in current level
             currentPortal = portalDict[currSaveData.currLevelID];
             LoadWorld(currentPortal);
-            currentPortal.InvokeResourceChange(); // May not be needed?
 
             // Initialize player position from player position in currSaveData
             Vector3 position = currSaveData.playerData.position;

@@ -70,10 +70,10 @@ public abstract class Entity : MonoBehaviour
 
     public virtual void Die()
     {
-        Destroy(gameObject);
         state = State.Dead;
         if (anim != null) anim.Play("Death");
-        // TODO: Drop loot
+        var deathAnimTime = anim.GetCurrentAnimatorClipInfo(0)[0].clip.length;
+        Invoke("Delete", deathAnimTime);
     }
 
     public virtual void Delete(){

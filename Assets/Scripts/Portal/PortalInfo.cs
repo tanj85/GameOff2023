@@ -7,14 +7,14 @@ using UnityEngine.EventSystems;
 public class PortalInfo
 {
     public bool hasParent = false;
-	public int parentID;// { get; private set; }
+	public int parentID;
     public List<int> childrenID = new List<int>();
-    public int id; // { get; }
-    public int level; // { get; }
-    public float difficultyMultiplier; // { get; private set; }
-    public int dreamEnergy; // { get; private set; }
-    public int soulCrystals; // { get; private set; }
-    public int output; // { get; private set; }
+    public int id;
+    public int level;
+    public float difficultyMultiplier;
+    public int dreamEnergy;
+    public int soulCrystals;
+    public int output;
 
     public delegate void OnResourceChange(int _dreamEnergy, int _soulCrystals);
     public static event OnResourceChange onResourceChange;
@@ -55,6 +55,5 @@ public class PortalInfo
     public void InvokeResourceChange()
     {
         onResourceChange?.Invoke(dreamEnergy, soulCrystals);
-        Debug.Log($"PortalInfo InvokeResourceChange called, dream energy: {dreamEnergy}, soul crystals: {soulCrystals}");
     }
 }
