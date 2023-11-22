@@ -93,9 +93,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 693145537526419995}
-  - component: {fileID: 3449125594014518316}
   - component: {fileID: 2699337404867617424}
   - component: {fileID: 261324734018332469}
+  - component: {fileID: 6178724198238320085}
   m_Layer: 0
   m_Name: BasicProjectile
   m_TagString: Untagged
@@ -119,24 +119,6 @@ Transform:
   - {fileID: 5188055995858540879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3449125594014518316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7925464986523325424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e79ecd93e735524459d40ce40aea11fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  direction: {x: 1589.0009, y: 725.84845}
-  damage: 10
-  affectedTypes: 01000000
-  range: 10
-  pierce: 1
 --- !u!50 &2699337404867617424
 Rigidbody2D:
   serializedVersion: 4
@@ -199,3 +181,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &6178724198238320085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7925464986523325424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ab615865baf5d4ca1425ad5785a2b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  direction: {x: 0, y: 0}
+  damage: 30
+  affectedTypes: 01000000
+  range: 5
+  pierce: 2

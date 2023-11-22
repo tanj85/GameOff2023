@@ -16,7 +16,7 @@ public class Mob : Enemy
         entityType = EntityType.Enemy;
     }
 
-    public virtual void Update(){
+    public override void Update(){
         if (player != null){
             // If enemy is damaged or attacking or dead, pause movement for 0.5f seconds.
             if (state == State.Damaged || state == State.Attacking || state == State.Dead){

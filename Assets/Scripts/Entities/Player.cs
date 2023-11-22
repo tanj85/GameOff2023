@@ -16,7 +16,7 @@ public class Player : Entity
         entityType = EntityType.Player;
     }
 
-    void Update()
+    public override void Update()
     {
         // Handle movement
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -33,6 +33,11 @@ public class Player : Entity
 
     void FixedUpdate(){
         rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime); 
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        
     }
 
     public override void Die()

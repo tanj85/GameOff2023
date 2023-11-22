@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
     public float speed;
     public Vector2 direction;
@@ -58,16 +58,6 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject);
-        Entity hitEntity = collision.GetComponent<Entity>();
-        if (hitEntity)
-        {
-            OnHit(hitEntity);
-        }
-        else 
-        {
-            ParentReference parentReference = collision.GetComponent<ParentReference>();
-            if (parentReference && parentReference.parent.GetComponent<Entity>())
-            OnHit(parentReference.parent.GetComponent<Entity>());
-        }
+        OnHit(Entity.GrabTargetEntityOrParentReferenceEntity(collision.gameObject));
     }
 }

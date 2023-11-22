@@ -41,6 +41,11 @@ public abstract class Entity : MonoBehaviour
         healthBar.value = 1;
     }
 
+    public virtual void Update()
+    {
+        ;
+    }
+
     [ContextMenu("Take Damage")]
     public void TestTakeDamage()
     {
@@ -78,5 +83,22 @@ public abstract class Entity : MonoBehaviour
 
     public virtual void Delete(){
         Destroy(gameObject);
+    }
+
+    public static Entity GrabTargetEntityOrParentReferenceEntity(GameObject target)
+    {
+        Entity hitEntity = target.GetComponent<Entity>();
+        if (hitEntity)
+        {
+            return hitEntity;
+        }
+        else
+        {
+            ParentReference parentReference = target.GetComponent<ParentReference>();
+            if (parentReference && parentReference.parent.GetComponent<Entity>())
+                 return parentReference.parent.GetComponent<Entity>();
+        }
+
+        return null;
     }
 }
