@@ -474,13 +474,15 @@ MonoBehaviour:
   maxHealth: 100
   speed: 1
   attackDamage: 20
-  attackSpeed: 2
-  attackRange: 0
   attackCooldown: 3
   anim: {fileID: 1923538266032787900}
   healthBar: {fileID: 1734486271001619355}
   player: {fileID: 0}
+  timer: 0
   playerTriggerResponse: {fileID: 7027856434256026619}
+  numSoulCrystalsToDrop: 0
+  numCrystalsPerDrop: 0
+  soulCrystalPrefab: {fileID: 0}
 --- !u!212 &3379680015963073020
 SpriteRenderer:
   m_ObjectHideFlags: 0

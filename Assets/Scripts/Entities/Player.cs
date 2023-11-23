@@ -60,7 +60,7 @@ public class Player : Entity
         IInteractable interactable = IInteractable.GrabTargetInteractableOrParentReferenceInteractable(collision.gameObject);
         if (interactable != null)
         {
-            currentInteractable.hoverInteract(false);
+            currentInteractable?.hoverInteract(false);
             if (currentInteractable == interactable)
             {
                 nearInteractable = false;

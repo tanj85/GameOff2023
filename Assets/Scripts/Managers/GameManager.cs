@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public delegate void OnSave();
     public static event OnSave onSave;
 
+    public delegate void OnSyncInteractables();
+    public static event OnSyncInteractables onSyncInteractables;
+
     public Dictionary<int, PortalInfo> portalDict = new Dictionary<int, PortalInfo>();
     
     public Dictionary<Boss.Bosses, GameObject> bossPrefabDictionary = new Dictionary<Boss.Bosses, GameObject>();
@@ -51,6 +54,8 @@ public class GameManager : MonoBehaviour
         {
             interactableDictionary.Add(linker.interactableType, linker.interactablePrefab);
         }
+        currentPortal = null;
+        Debug.Log(currentPortal);
     }
 
     // Start is called before the first frame update
@@ -86,7 +91,15 @@ public class GameManager : MonoBehaviour
             GameObject interactable = Instantiate(
                 interactableDictionary[InteractableInfo.InteractableType.Portal], 
                 new Vector2(Random.Range(-3, 3), Random.Range(-3, 3)) + (Vector2) player.transform.position, Quaternion.identity);
-            interactable.GetComponent<Portal>().Initialize(currentPortal.id == 0? 1 : 0, true);
+            interactable.GetComponent<Portal>().Initialize(-1, false, true, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            player = GetPlayer();
+            GameObject interactable = Instantiate(
+                interactableDictionary[InteractableInfo.InteractableType.Portal],
+                new Vector2(Random.Range(-3, 3), Random.Range(-3, 3)) + (Vector2)player.transform.position, Quaternion.identity);
+            interactable.GetComponent<Portal>().Initialize(-1, false, false, 0);
         }
         if (Input.GetKeyDown(KeyCode.B))
         {
@@ -103,13 +116,14 @@ public class GameManager : MonoBehaviour
         return GameObject.FindGameObjectWithTag("Player");
     }
 
-    public void GenerateRandomWorld(int level, int dreamEnergy, int? parentID = null, int? childID = null)
+    public int GenerateRandomWorld(int level, int dreamEnergy, int? parentID = null, int? childID = null)
     {
+        // Create new world
         int i = 0;
-        while (true)
+        while (i < portalDict.Count + 1)
         {
             if (!portalDict.ContainsKey(i)){
-                portalDict.Add(i, new PortalInfo(i, level, Mathf.Pow(10f, level), dreamEnergy));
+                portalDict.Add(i, new PortalInfo(i, level, Mathf.Pow(10f, level)));
                 if (parentID.HasValue)
                 {
                     portalDict[i].SetParentID(parentID.Value);
@@ -122,13 +136,58 @@ public class GameManager : MonoBehaviour
             }
             i++;
         }
+
+        // generate random totems and stuff into the world
+        // For now, we hardcode 3 boss totems to appear in the world, at easy/med/hard difficulty
+        BossTotemInfo easyTotem = new BossTotemInfo(Boss.GetRandomBossOfDifficulty(Boss.BossDifficulty.Easy));
+        portalDict[i].bossTotemInfos.Add(easyTotem);
+        BossTotemInfo medTotem = new BossTotemInfo(Boss.GetRandomBossOfDifficulty(Boss.BossDifficulty.Medium));
+        portalDict[i].bossTotemInfos.Add(medTotem);
+        BossTotemInfo hardTotem = new BossTotemInfo(Boss.GetRandomBossOfDifficulty(Boss.BossDifficulty.Hard));
+        portalDict[i].bossTotemInfos.Add(hardTotem);
+
+        if (parentID.HasValue)
+        {
+            portalDict[i].parentID = parentID.Value;
+            PortalInteractableInfo spawnPortal = new PortalInteractableInfo(true, parentID.Value, true, dreamEnergy, Vector2.zero);
+            portalDict[i].portalInteractableInfos.Add(spawnPortal);
+        }
+
+        if (childID.HasValue)
+        {
+            portalDict[i].childrenID.Add(childID.Value);
+            PortalInteractableInfo spawnPortal = new PortalInteractableInfo(true, childID.Value, false, dreamEnergy, Vector2.zero);
+            portalDict[i].portalInteractableInfos.Add(spawnPortal);
+        }
+
+        return i;
     }
 
     // Loads a portal by clearing the current game state to base and then setting up a new world
     public void LoadWorld(PortalInfo portal){
+        Debug.Log(portal.portalInteractableInfos.Count);
         PortalInfo lastPortal = currentPortal;
         ClearCurrentWorld();
         SetupWorld(portal, lastPortal);
+        ValidateWorld();
+    }
+
+
+    /*
+     * 1. Destroy all active entities (player, monsters, bosses)
+     * 2. Destroy all interactables
+     */
+    private void ClearCurrentWorld(){
+        // Destroy active entities
+        // Destroy interactables
+        if (currentPortal != null)
+        {
+            currentPortal.ClearAllInteractableLists();
+        }
+
+        onCleanWorld?.Invoke();
+
+        currentPortal = null;
     }
 
     /*
@@ -140,6 +199,7 @@ public class GameManager : MonoBehaviour
      */
     private void SetupWorld(PortalInfo portal, PortalInfo lastPortal)
     {
+        Debug.Log(portal.portalInteractableInfos.Count);
         currentPortal = portal;
         Vector2 entryPortalLocation = Vector2.zero;
 
@@ -147,18 +207,21 @@ public class GameManager : MonoBehaviour
         //update world look?
 
         //Debug.Log(portal.bossTotemInfos.Count);
+        Debug.Log(portal.portalInteractableInfos.Count);
 
         // Instantiate interactables
         foreach (BossTotemInfo info in currentPortal.bossTotemInfos)
         {
             GameObject interactable = Instantiate(interactableDictionary[info.interactableType], info.location, Quaternion.identity);
-            interactable.GetComponent<BossTotem>().Initialize(info.heldBoss, info.cost, info.reward);
+            interactable.GetComponent<BossTotem>().Initialize(info);
 
         }
+        Debug.Log(portal.portalInteractableInfos.Count);
         foreach (PortalInteractableInfo info in currentPortal.portalInteractableInfos)
         {
+            Debug.Log(info.sendWorldID);
             GameObject interactable = Instantiate(interactableDictionary[info.interactableType], info.location, Quaternion.identity);
-            interactable.GetComponent<Portal>().Initialize(info.sendWorldID, info.hasSendWorld);
+            interactable.GetComponent<Portal>().Initialize(info);
 
             if (info.sendWorldID == lastPortal?.id)
             {
@@ -166,23 +229,44 @@ public class GameManager : MonoBehaviour
             }
 
         }
+        Debug.Log(portal.portalInteractableInfos.Count);
         // Instantiate player
         Instantiate(playerPrefab, entryPortalLocation, Quaternion.identity);
     }
 
+    private void ValidateWorld()
+    {
+        int intendedTotalDreamEnergy = 0;
+        HashSet<int> checkedPortalIDs = new HashSet<int>();
+        foreach (int childID in currentPortal.childrenID)
+        {
+            if (!checkedPortalIDs.Contains(childID))
+            {
+                checkedPortalIDs.Add(childID);
+                intendedTotalDreamEnergy += portalDict[childID].output;
+            }
+        }
+        if (currentPortal.hasParent)
+        {
+            if (!checkedPortalIDs.Contains(currentPortal.parentID))
+            {
+                checkedPortalIDs.Add(currentPortal.parentID);
+                int parentContribution = portalDict[currentPortal.parentID].totalDreamEnergyAcquired;
+                intendedTotalDreamEnergy += parentContribution > 0 ? parentContribution : 0;
+            }
+        }
+        if (currentPortal.totalDreamEnergyAcquired < intendedTotalDreamEnergy)
+        {
+            Debug.Log($"adding {intendedTotalDreamEnergy - currentPortal.totalDreamEnergyAcquired} dream energy");
+            Debug.Log($"intended: {intendedTotalDreamEnergy}, current_total: {currentPortal.totalDreamEnergyAcquired}");
+            currentPortal.AddDreamEnergy(intendedTotalDreamEnergy - currentPortal.totalDreamEnergyAcquired);
+        }
+    }
 
-    /*
-     * 1. Destroy all active entities (player, monsters, bosses)
-     * 2. Destroy all interactables
-     */
-    private void ClearCurrentWorld(){
-        // Destroy active entities
-        // Destroy interactables
-        currentPortal.clearAllInteractableLists();
-
-        onCleanWorld?.Invoke();
-        
-        currentPortal = null;
+    public void SyncInteractables()
+    {
+        currentPortal.ClearAllInteractableLists();
+        onSyncInteractables?.Invoke();
     }
 
     #region Save methods.
@@ -208,6 +292,7 @@ public class GameManager : MonoBehaviour
 
             // Load in current level
             //Debug.Log(portalDict[currSaveData.currLevelID].bossTotemInfos.Count + "|" + currSaveData.currLevelID);
+            Debug.Log(currentPortal);
             LoadWorld(portalDict[currSaveData.currLevelID]);
 
             // Initialize player position from player position in currSaveData
@@ -233,7 +318,8 @@ public class GameManager : MonoBehaviour
     // This function is subject to change and finalization as number of save variables increase!
     public void CreateNewSave(int saveIndex)
     {
-        currentPortal.clearAllInteractableLists();
+        currentPortal.ClearAllInteractableLists();
+        onSyncInteractables?.Invoke();
         onSave?.Invoke();
         SaveData newSave = new SaveData();
 

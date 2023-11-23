@@ -54,15 +54,22 @@ MonoBehaviour:
     dreamEnergy: 0
     soulCrystals: 0
     output: 0
+    bossTotemInfos: []
+    portalInteractableInfos: []
   bossLinkers:
   - boss: 0
     bossPrefab: {fileID: 1566641246448889684, guid: b637eefd6474de349945a3018d340027, type: 3}
+  - boss: 1
+    bossPrefab: {fileID: 1753066703198276081, guid: 0ac90a9857119924bb0870f6679da81c, type: 3}
+  - boss: 2
+    bossPrefab: {fileID: 2158545100770011284, guid: 869ed0e60040ccb46a242812ad2bd96b, type: 3}
+  - boss: 3
+    bossPrefab: {fileID: 9184407985458863337, guid: 99622fba924431349a5c9ecd93b06823, type: 3}
   interactableLinkers:
   - interactableType: 0
     interactablePrefab: {fileID: 4877906130345106585, guid: 8a20007af7c753943ae7adeddfa9b3cb, type: 3}
   - interactableType: 1
     interactablePrefab: {fileID: 7282101813538974708, guid: 0979ee7910c32524097b7777c5a6782d, type: 3}
-  player: {fileID: 0}
   playerPrefab: {fileID: 9158768214411622648, guid: 246d6b743011dd843a34224a7da792d3, type: 3}
   currSaveData:
     portalIDs: 

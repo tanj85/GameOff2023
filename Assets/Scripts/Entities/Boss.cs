@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,10 @@ public class Boss : Enemy
 
     public float maxKillTime;
     public float killTimer;
+
+    public BossDifficulty difficulty;
+    public int baseRewards;
+    public Boss.Bosses bossType;
 
     public delegate void OnBossHealthChange(float _health, float _maxHealth);
     public static event OnBossHealthChange onBossHealthChange;
@@ -23,7 +28,16 @@ public class Boss : Enemy
     public static event OnBossDie onBossStop;
     public enum Bosses
     {
-        TestBoss
+        TestBoss,
+        TestBossEasy,
+        TestBossMedium,
+        TestBossHard
+    }
+    public enum BossDifficulty
+    {
+        Easy,
+        Medium,
+        Hard
     }
 
     public override void Start()
@@ -81,5 +95,16 @@ public class Boss : Enemy
         //spawn portal
 
         DestroySelf();
+    }
+
+    public static Boss.Bosses GetRandomBossOfDifficulty(Boss.BossDifficulty difficulty)
+    {
+        List<GameObject> bossesOfDifficulty = 
+            GameManager.Instance.bossPrefabDictionary.Values.Where(x => x.GetComponent<Boss>().difficulty == difficulty).ToList();
+        if (bossesOfDifficulty.Count == 0)
+        {
+            Debug.LogError($"No boss of difficulty {difficulty}");
+        }
+        return bossesOfDifficulty[Random.Range(0, bossesOfDifficulty.Count)].GetComponent<Boss>().bossType;
     }
 }
