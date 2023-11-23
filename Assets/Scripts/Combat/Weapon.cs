@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour, ICollectible
     //public WeaponType weaponType;
     public int attackDamage;
     public int attackCooldown;
-    public Sprite sprite;
 
     void OnTriggerEnter2D(Collider2D collider)
     {
