@@ -7,9 +7,11 @@ public class EnemyGenerator : MonoBehaviour
     public List<GameObject> enemyPrefabs; // List of enemy prefabs to spawn. Fill this in Inspector.
     public List<float> enemySpawnWeights; // Weights of spawn chances for each enemy prefab. Fill this in Inspector.
     private Transform enemyParent; // Parent object for all enemies.
-    public float timeUntilSpawn; // Time until next enemy spawns.
+    private float timeUntilSpawn; // Time until next enemy spawns.
+    private float timeUntilStop = 0f; // Time until enemy spawning stops.
     public float minimumSpawnTime; // Minimum time until next enemy spawns.
     public float maximumSpawnTime; // Maximum time until next enemy spawns.
+    public float stopSpawnTime; // Time until enemy spawning stops.
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +24,9 @@ public class EnemyGenerator : MonoBehaviour
     void Update()
     {
         timeUntilSpawn -= Time.deltaTime;
+        timeUntilStop += Time.deltaTime;
 
-        if (timeUntilSpawn <= 0){
+        if (timeUntilSpawn <= 0 && timeUntilStop <= stopSpawnTime){
             SpawnEnemy();
             SetTimeUntilSpawn();
         }

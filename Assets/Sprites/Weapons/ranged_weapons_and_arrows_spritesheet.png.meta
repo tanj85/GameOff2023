@@ -1,0 +1,1438 @@
+fileFormatVersion: 2
+guid: 0b902293d06ce044bb70eb99656d0b32
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 15
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 173
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa183efae1f99324592509fb8e8f10d2
+      internalID: 1668644397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 174
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ef89e6ddef4f24a95e601f3887e8bc
+      internalID: 580310903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 148
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e5e08b376bb894097cfa9dd4283164
+      internalID: -1639494895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 173
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ab542a017343147915597a841a5cdc
+      internalID: 1399423475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 173
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f1ff5c296e31f4eb5e7aa00434b956
+      internalID: 702000397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 173
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0763573d0cf197e489dd1d3c8b74028d
+      internalID: -2106368592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 173
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cadec60e2cc885418c6276c175ffb9a
+      internalID: 504081266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 173
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893d9b2bde89c5d4e97bbe9973eb9577
+      internalID: 335375028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 149
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6529721b32035428b221862519846f
+      internalID: 846709728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 149
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446bc4cb44143a1498e7a15a9192dacb
+      internalID: 1108965692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 126
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81053c84bc73dfe4d873c54596e9a45b
+      internalID: -476777733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 126
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aff29227da3b9c48a740f2934d4cb5c
+      internalID: -444900480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 126
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe7ae6331693f154cbc095528925e7af
+      internalID: 1783085238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 124
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79942fd05302ede41bc6c9610f4c1ad8
+      internalID: 13908667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 124
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd3cb349ea424549a31752ac238aacf
+      internalID: -1197165848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 125
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0deccbae7ea2ff448274e79876ce380
+      internalID: -267705186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 125
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baec3c4606804be4f910f7b11eaf534b
+      internalID: -1833130611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 125
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccd9dbc4afbad24d98a7013c9c95c46
+      internalID: 891530805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 99
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1192849bc07022645ae75ca3d1c85de8
+      internalID: -663512635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 99
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 168842c08bc852e42a4ea0c972a2dd94
+      internalID: -80084240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 104
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fbee6a9eb3d2a4094c243cc1d635bf
+      internalID: 133423283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 104
+        width: 48
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fdb122061454941a9afa1fe766681c
+      internalID: 1890538319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 99
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b052b3896bb644cb3b030c061051d4
+      internalID: -1732368303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 99
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85da63f13bb22d74db59ded86eaa88e3
+      internalID: -204341460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 100
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7dd5ce8b556a641a2b2beb77981d7f
+      internalID: -914585145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca57a7c94c38ec4eb8cd426857c2edc
+      internalID: -1194715298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 75
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d34a4778446011459ebf61305209adb
+      internalID: -1474227727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 77
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510abedc81f62b549850a4541b4304e5
+      internalID: -1444567939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 76
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53f818fea7f6d4e4c9d5d2a87e6ff6b0
+      internalID: 1421570256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 76
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96be9b0e7787fe64e881ffe8c0453afe
+      internalID: 1841130280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 77
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6f9b9776aba9e4891e5169c5ecc912
+      internalID: 339130684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 77
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f94b05fa55d494192572915adfcb74
+      internalID: -1530104699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 77
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baee62d449f093749bdab3f131d25a23
+      internalID: 710227357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b59b8349aa69c84eb5bff2e1349b9aa
+      internalID: 1514665097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 52
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e844132aaf4c74293f60af0230f3b1
+      internalID: 132319142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea735e9d393b7347b6c1fc0ebb72199
+      internalID: 52689697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 54
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5090d24a3dc1cae428476f71873c8248
+      internalID: 1627268912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 51
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f292c74b8e3ffbe4b98db6d2358a8bd7
+      internalID: -418271017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 54
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fb685306e7d5d47b9198e0cfec1012
+      internalID: -992603368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 53
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fc0b75ae862b74288a6e903a634fd1
+      internalID: -1662339389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 51
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4880865e2a4282498d03a1dd784f059
+      internalID: 1216462912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 32
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e112da61d103add439262ecd9567b1e1
+      internalID: -172023035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 30
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e47fbacd1a52a341ab187445c6509f9
+      internalID: 1096798871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 32
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64775efdc6c86cb469a2e07a59020cde
+      internalID: -1060136855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 33
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad9b6b8bea826945a3ee33625cd0379
+      internalID: -1677153744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 33
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c91e447981a64324d9590fa0e5813bdb
+      internalID: 91523451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 33
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d69484b639b78145a20bd98359163e4
+      internalID: -1550430017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 33
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ab79ec1b322610469b0d8ce64bbb96e
+      internalID: -1754968629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 33
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2427e8bc0c358549aa454f2d53ef1fe
+      internalID: 1849938978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab24bdbf10d896e49bbb7cca33a97231
+      internalID: -846453467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 4
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58492b9acd8530149805f5194a78f146
+      internalID: -561163628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 14
+        width: 28
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7554fda232bda064585bd3255acd13cb
+      internalID: -821285908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 3
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c2b149cf8d73ae4abad2dd9bef87da2
+      internalID: 1006450807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 148
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a89c389dc58fd4f865782dbdf973f1
+      internalID: -886787656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 148
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2369e98a9ee79df4aae5bd276dc41ae9
+      internalID: 1248781599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 148
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6892000bff718b84ea5ec7087cfba250
+      internalID: 1543906416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 174
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6a4ec19aa78d146b5e9dc4f59b01c3
+      internalID: 1394476145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 148
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac302938df8a2345be968b50ec00bb6
+      internalID: 440311920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ranged_weapons_and_arrows_spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 148
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd768b6220635ed47a5dfa139d3e28e2
+      internalID: -1591132769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      ranged_weapons_and_arrows_spritesheet_0: 1668644397
+      ranged_weapons_and_arrows_spritesheet_1: 580310903
+      ranged_weapons_and_arrows_spritesheet_10: -476777733
+      ranged_weapons_and_arrows_spritesheet_11: -444900480
+      ranged_weapons_and_arrows_spritesheet_12: 1783085238
+      ranged_weapons_and_arrows_spritesheet_13: 13908667
+      ranged_weapons_and_arrows_spritesheet_14: -1197165848
+      ranged_weapons_and_arrows_spritesheet_15: -267705186
+      ranged_weapons_and_arrows_spritesheet_16: -1833130611
+      ranged_weapons_and_arrows_spritesheet_17: 891530805
+      ranged_weapons_and_arrows_spritesheet_18: -663512635
+      ranged_weapons_and_arrows_spritesheet_19: -80084240
+      ranged_weapons_and_arrows_spritesheet_2: -1639494895
+      ranged_weapons_and_arrows_spritesheet_20: 133423283
+      ranged_weapons_and_arrows_spritesheet_21: 1890538319
+      ranged_weapons_and_arrows_spritesheet_22: -1732368303
+      ranged_weapons_and_arrows_spritesheet_23: -204341460
+      ranged_weapons_and_arrows_spritesheet_24: -914585145
+      ranged_weapons_and_arrows_spritesheet_25: -1194715298
+      ranged_weapons_and_arrows_spritesheet_26: -1474227727
+      ranged_weapons_and_arrows_spritesheet_27: -1444567939
+      ranged_weapons_and_arrows_spritesheet_28: 1421570256
+      ranged_weapons_and_arrows_spritesheet_29: 1841130280
+      ranged_weapons_and_arrows_spritesheet_3: 1399423475
+      ranged_weapons_and_arrows_spritesheet_30: 339130684
+      ranged_weapons_and_arrows_spritesheet_31: -1530104699
+      ranged_weapons_and_arrows_spritesheet_32: 710227357
+      ranged_weapons_and_arrows_spritesheet_33: 1514665097
+      ranged_weapons_and_arrows_spritesheet_34: 132319142
+      ranged_weapons_and_arrows_spritesheet_35: 52689697
+      ranged_weapons_and_arrows_spritesheet_36: 1627268912
+      ranged_weapons_and_arrows_spritesheet_37: -418271017
+      ranged_weapons_and_arrows_spritesheet_38: -992603368
+      ranged_weapons_and_arrows_spritesheet_39: -1662339389
+      ranged_weapons_and_arrows_spritesheet_4: 702000397
+      ranged_weapons_and_arrows_spritesheet_40: 1216462912
+      ranged_weapons_and_arrows_spritesheet_41: -172023035
+      ranged_weapons_and_arrows_spritesheet_42: 1096798871
+      ranged_weapons_and_arrows_spritesheet_43: -1060136855
+      ranged_weapons_and_arrows_spritesheet_44: -1677153744
+      ranged_weapons_and_arrows_spritesheet_45: 91523451
+      ranged_weapons_and_arrows_spritesheet_46: -1550430017
+      ranged_weapons_and_arrows_spritesheet_47: -1754968629
+      ranged_weapons_and_arrows_spritesheet_48: 1849938978
+      ranged_weapons_and_arrows_spritesheet_49: -846453467
+      ranged_weapons_and_arrows_spritesheet_5: -2106368592
+      ranged_weapons_and_arrows_spritesheet_50: -561163628
+      ranged_weapons_and_arrows_spritesheet_51: -821285908
+      ranged_weapons_and_arrows_spritesheet_52: 1006450807
+      ranged_weapons_and_arrows_spritesheet_53: -886787656
+      ranged_weapons_and_arrows_spritesheet_54: 1248781599
+      ranged_weapons_and_arrows_spritesheet_55: 1543906416
+      ranged_weapons_and_arrows_spritesheet_56: 1394476145
+      ranged_weapons_and_arrows_spritesheet_57: 440311920
+      ranged_weapons_and_arrows_spritesheet_58: -1591132769
+      ranged_weapons_and_arrows_spritesheet_6: 504081266
+      ranged_weapons_and_arrows_spritesheet_7: 335375028
+      ranged_weapons_and_arrows_spritesheet_8: 846709728
+      ranged_weapons_and_arrows_spritesheet_9: 1108965692
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

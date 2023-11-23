@@ -11,6 +11,7 @@ public class Player : Entity
 
     private IInteractable currentInteractable;
     private bool nearInteractable = false;
+    public Weapon weaponInHand;
 
     public override void Start()
     {
@@ -71,5 +72,22 @@ public class Player : Entity
     public override void Die()
     {
         base.Die();
+    }
+
+    public void EquipWeapon(Weapon weapon)
+    {
+        if (weaponInHand != null)
+        {
+            Destroy(weaponInHand.gameObject);
+        }
+        weaponInHand = weapon;
+    }
+
+    [ContextMenu("Test Equip Weapon")]
+    public void TestEquipWeapon()
+    {
+        Weapon firstWeapon = (Weapon)Inventory.inventory[0];
+        Debug.Log($"Weapon Type: {firstWeapon.weaponType}, Attack Damage: {firstWeapon.attackDamage}, Attack Cooldown: {firstWeapon.attackCooldown}");
+        EquipWeapon(firstWeapon);
     }
 }

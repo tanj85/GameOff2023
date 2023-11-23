@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &603022027417037045
+--- !u!1 &4514821894179288022
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 808020600755551750}
-  - component: {fileID: 8499759633516560913}
+  - component: {fileID: 6401036711459100293}
+  - component: {fileID: 1446273321046104187}
   m_Layer: 0
-  m_Name: EnemyGenerator
+  m_Name: WeaponGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &808020600755551750
+--- !u!4 &6401036711459100293
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603022027417037045}
+  m_GameObject: {fileID: 4514821894179288022}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.084136486, y: -2.3685713, z: 0.4830175}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8499759633516560913
+--- !u!114 &1446273321046104187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 603022027417037045}
+  m_GameObject: {fileID: 4514821894179288022}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ea2bec8049b74040bb108b844c451ee, type: 3}
+  m_Script: {fileID: 11500000, guid: 12f2f83bc9454954c9a05753367c80be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefabs:
-  - {fileID: 9084916475424990219, guid: f4212cf05a93fce45862eea9f0f6bec7, type: 3}
-  - {fileID: 7578090284479425224, guid: c46c55f2a7732d440b6074ad5b6a76d3, type: 3}
-  - {fileID: 9063494834479173019, guid: d4b500c3c16804842871bc8882349182, type: 3}
-  enemySpawnWeights:
-  - 0.2
-  - 0
-  - 0.3
-  minimumSpawnTime: 5
-  maximumSpawnTime: 8
-  stopSpawnTime: 20
+  minAttackDamage: 1
+  maxAttackDamage: 10
+  minAttackCooldown: 2
+  maxAttackCooldown: 8
+  weaponPrefab: {fileID: 2079495687361673990, guid: f4c756beedbb1e343b4013cc2ee892f6, type: 3}
